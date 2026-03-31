@@ -34,6 +34,7 @@ import corvaxLogo from "../assets/corvax-forge.webp";
 import kingdomLogo from "../assets/kingdom-dream.webp";
 import headerLogo from "../assets/logo.png";
 import ratgoreLogo from "../assets/ratgore.webp";
+import artText from "../assets/ss14.art.txt?raw";
 import stalkerLogo from "../assets/stalker.webp";
 import wwdpLogo from "../assets/wwdp.webp";
 import { useColorMode } from "./theme";
@@ -238,6 +239,22 @@ export default function App() {
     return () => {
       window.removeEventListener("scroll", updateActiveSection);
       window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleF12 = (event) => {
+      if (event.key !== "F12") {
+        return;
+      }
+
+      console.log(`\n${artText}`);
+    };
+
+    window.addEventListener("keydown", handleF12);
+
+    return () => {
+      window.removeEventListener("keydown", handleF12);
     };
   }, []);
 
