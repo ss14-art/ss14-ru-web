@@ -262,6 +262,8 @@ export default function App() {
     <Box
       sx={{
         minHeight: "100vh",
+        display: "flex",
+        flexDirection: "column",
         background: `
           radial-gradient(circle at top left, ${alpha(theme.palette.primary.light, 0.22)}, transparent 24%),
           radial-gradient(circle at top right, ${alpha(theme.palette.secondary.main, 0.16)}, transparent 20%),
@@ -308,13 +310,11 @@ export default function App() {
           >
             <Box
               sx={{
-                width: { xs: 44, md: 52 },
-                height: { xs: 44, md: 52 },
-                borderRadius: "28px",
+                width: { xs: 56, md: 72 },
+                height: { xs: 56, md: 72 },
                 display: "grid",
                 placeItems: "center",
                 flexShrink: 0,
-                overflow: "hidden",
               }}
             >
               <Box
@@ -394,7 +394,11 @@ export default function App() {
       <Container
         maxWidth="xl"
         sx={{
-          py: { xs: 2, md: 5 },
+          flexGrow: 1,
+          display: "flex",
+          flexDirection: "column",
+          pt: { xs: 2, md: 5 },
+          pb: { xs: 2, md: 0 },
           mt: { xs: 0, md: 0 },
         }}
       >
@@ -532,7 +536,7 @@ export default function App() {
         >
           <Grid container spacing={2.5}>
             {servers.map((server) => (
-              <Grid key={server.name} size={{ xs: 12, xl: 6 }}>
+              <Grid key={server.name} size={{ xs: 12, lg: 6 }}>
                 <Card
                   elevation={0}
                   sx={{
@@ -705,7 +709,7 @@ export default function App() {
           sx={{
             pt: { xs: 4, md: 5 },
             pb: 0,
-            mt: { xs: 1, md: 2 },
+            mt: { xs: 1, md: "auto" },
           }}
         >
           <Card
@@ -728,17 +732,17 @@ export default function App() {
                     Space Station 14 RU
                   </Typography>
                   <Typography variant="body1" color="text.secondary" sx={{ maxWidth: 520 }}>
-                    Сайт с информацией о партнёрских серверах, планах, идеях и вступлении в
-                    программу.
+                    Площадка с актуальной информацией о партнёрских серверах, целях программы и
+                    порядке вступления.
                   </Typography>
                 </Box>
                 <Typography
-                  variant="body1"
+                  variant="body2"
                   color="text.secondary"
-                  sx={{ maxWidth: { xs: "100%", lg: 620 } }}
+                  sx={{ maxWidth: { xs: "100%", lg: 540 }, opacity: 0.78 }}
                 >
-                  Сайт никак не связан со Space Wizard Federation и официальными разработчиками
-                  Space Station 14 Space Wizard{" "}
+                  Неофициальный сайт сообщества. Не связан с Space Wizard Federation.
+                  Официальный сайт Space Station 14:{" "}
                   <Link href="https://spacestation14.io" target="_blank" rel="noreferrer" underline="hover">
                     spacestation14.io
                   </Link>
