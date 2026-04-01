@@ -42,8 +42,8 @@ import { useColorMode } from "./theme";
 const sections = [
   { id: "home", label: "Главная" },
   { id: "servers", label: "Серверы" },
-  { id: "plans", label: "Планы" },
-  { id: "ideas", label: "Идеи" },
+  { id: "plans", label: "О нас" },
+  { id: "ideas", label: "Цели" },
   { id: "join", label: "Как вступить" },
 ];
 
@@ -60,7 +60,7 @@ const logoMap = {
 const planItems = [
   {
     icon: <HubRoundedIcon />,
-    title: "Общая инфраструктура",
+    title: "Общей инфраструкторой",
     text: "Совместные усилия для развития всего хаба и создания общей инфраструктуры для привлечения новой аудитории в игру.",
   },
   {
@@ -97,16 +97,16 @@ const joinSteps = [
   {
     index: "01",
     title: "Зайдите на SS14 Devbus RU",
-    text: "Перейдите в Discord-сервер SS14 Devbus RU.",
+    text: "Перейдите в Discord-сервер ",
     href: "https://discord.gg/jtc3z5qVA2",
-    label: "discord.gg/jtc3z5qVA2",
+    label: "SS14 Devbus RU",
   },
   {
     index: "02",
     title: "Откройте форум заявок",
-    text: "Напишите сообщение на форуме подачи заявок.",
+    text: "Напишите сообщение на ",
     href: "https://discord.com/channels/1479541729320501412/1479769963492413450",
-    label: "Форум подачи заявок",
+    label: "форуме подачи заявок",
   },
   {
     index: "03",
@@ -116,7 +116,7 @@ const joinSteps = [
   {
     index: "04",
     title: "Ожидайте решения",
-    text: "После этого коллективно будет принято решение о вашем вступлении в партнерскую программу Space Station 14 RU.",
+    text: "После этого будет проведено голосование, по итогам которого будет принято решение о вашем вступлении в партнерскую программу Space Station 14 RU.",
   },
 ];
 
@@ -457,7 +457,7 @@ export default function App() {
                       </Typography>
                       <Typography variant="h5">Развитие SS14 RU</Typography>
                       <Typography variant="body1" color="text.secondary">
-                        Общая инфраструктура, обмен опытом, продвижение контента и рост общей
+                        Общей инфраструкторой, обмен опытом, продвижение контента и рост общей
                         аудитории.
                       </Typography>
                     </Stack>
@@ -627,7 +627,7 @@ export default function App() {
           </Grid>
         </SectionShell>
 
-        <SectionShell id="plans" kicker="Планы" title="Что важно для программы" tonal>
+        <SectionShell id="plans" kicker="О нас" title="Чем мы совместно занимаемся" tonal>
           <Grid container spacing={2.5}>
             {planItems.map((item) => (
               <Grid key={item.title} size={{ xs: 12, md: 4 }}>
@@ -637,7 +637,7 @@ export default function App() {
           </Grid>
         </SectionShell>
 
-        <SectionShell id="ideas" kicker="Идеи" title="Куда движется программа">
+        <SectionShell id="ideas" kicker="Цели" title="Наши планы по развитию">
           <Grid container spacing={2.5}>
             {ideaItems.map((item, index) => (
               <Grid key={item.title} size={{ xs: 12, md: index === 0 ? 6 : 3 }}>
